@@ -14,6 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // UINavigationBar'ın varsayılan arka plan görüntüsünü boş bir görüntüyle değiştiriyor.
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        // UINavigationBar'ın varsayılan gölge görüntüsünü (alt çizgi) boş bir görüntüyle değiştiriyor.
+        UINavigationBar.appearance().shadowImage = UIImage()
+        // UINavigationBar'daki ögelerin (butonlar, metinler vb.) renklerini siyah olarak ayarlıyor.
+        UINavigationBar.appearance().tintColor = .black
+        
         return true
     }
 

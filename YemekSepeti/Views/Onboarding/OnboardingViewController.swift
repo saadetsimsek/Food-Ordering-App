@@ -42,6 +42,8 @@ class OnboardingViewController: UIViewController {
            OnboaringSlide(title: "World-Class Chefs", description: "Our dishes are prepared by only the best", image: UIImage(named: "slide2")! ),
            OnboaringSlide(title: "Instant World-Wide Delivery", description: "Your orders will be delivered instantly irrespective of your location around the world.", image: UIImage(named: "slide3")!),
         ]
+        
+        pageControl.numberOfPages = slides.count // slide kadar page control olucak
     }
     
 
