@@ -17,9 +17,12 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var categoryLabel: UILabel!
     
     func setup(category: DishCategory) {
+        print("save")
         categoryLabel.text = category.name
-        categoryImageView.kf.setImage(with: category.image.asURL)
+        categoryImageView.kf.setImage(with: category.image?.asURL)
     }
   
 
 }
+
+
