@@ -9,6 +9,8 @@ import UIKit
 
 class DishDetailViewController: UIViewController {
     
+    var dish: Dish!
+    
     @IBOutlet weak var dishImageView: UIImageView!
     
     @IBOutlet weak var dishTitleLabel: UILabel!
@@ -21,7 +23,8 @@ class DishDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        populateView()
         
     }
     
@@ -29,5 +32,11 @@ class DishDetailViewController: UIViewController {
     }
     
   
+    private func populateView(){
+        dishImageView.kf.setImage(with: dish.image?.asURL)
+        dishTitleLabel.text = dish.name
+        descriptionLabel.text = dish.description
+        caloriesLabel.text = dish.formattedCalories
+    }
 
 }
