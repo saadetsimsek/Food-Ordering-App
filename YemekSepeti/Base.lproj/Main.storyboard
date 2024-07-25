@@ -311,10 +311,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Yemek Sepeti" id="v5R-un-NRH">
+                        <barButtonItem key="backBarButtonItem" title=" " id="EWY-TK-siL"/>
                         <rightBarButtonItems>
                             <barButtonItem id="yY5-qX-Vh9"/>
                             <barButtonItem image="cart.circle.fill" catalog="system" id="NXh-al-eCM">
                                 <color key="tintColor" red="0.75294119120000003" green="0.15757345170000001" blue="0.1135336155" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <segue destination="YhL-Hn-Q7g" kind="show" id="5u0-8d-qv2"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -327,6 +331,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="orU-qY-vDR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1797.709923664122" y="0.0"/>
+        </scene>
+        <!--List Ordes View Controller-->
+        <scene sceneID="t50-Ag-KT7">
+            <objects>
+                <viewController id="YhL-Hn-Q7g" customClass="ListOrdesViewController" customModule="YemekSepeti" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z3a-CL-MqF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HGi-aJ-6e5">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fuC-A6-mgT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="HGi-aJ-6e5" secondAttribute="bottom" id="9Mh-Az-dhq"/>
+                            <constraint firstItem="HGi-aJ-6e5" firstAttribute="trailing" secondItem="fuC-A6-mgT" secondAttribute="trailing" id="Rdz-oJ-plv"/>
+                            <constraint firstItem="HGi-aJ-6e5" firstAttribute="leading" secondItem="fuC-A6-mgT" secondAttribute="leading" id="cvt-eH-ZXT"/>
+                            <constraint firstItem="HGi-aJ-6e5" firstAttribute="top" secondItem="fuC-A6-mgT" secondAttribute="top" id="xTK-fi-xEg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="POO-RI-yGX"/>
+                    <connections>
+                        <outlet property="tableView" destination="HGi-aJ-6e5" id="Wsc-xp-QAD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUO-ZW-oDg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1797.709923664122" y="698.59154929577471"/>
         </scene>
         <!--Dish Detail View Controller-->
         <scene sceneID="Kxp-dd-qbE">
