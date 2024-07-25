@@ -429,6 +429,36 @@
             </objects>
             <point key="canvasLocation" x="2629.770992366412" y="0.0"/>
         </scene>
+        <!--List Dishes View Controller-->
+        <scene sceneID="05D-bx-Ny1">
+            <objects>
+                <viewController storyboardIdentifier="ListDishesViewController" id="XWY-V8-x6Y" customClass="ListDishesViewController" customModule="YemekSepeti" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sYE-Ba-BWm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OMP-s8-pNv">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KZ5-T9-Z5o"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OMP-s8-pNv" firstAttribute="trailing" secondItem="KZ5-T9-Z5o" secondAttribute="trailing" id="A4T-1z-Xvn"/>
+                            <constraint firstItem="OMP-s8-pNv" firstAttribute="top" secondItem="KZ5-T9-Z5o" secondAttribute="top" id="Voa-WY-tSc"/>
+                            <constraint firstItem="OMP-s8-pNv" firstAttribute="leading" secondItem="KZ5-T9-Z5o" secondAttribute="leading" id="WfC-JA-zGp"/>
+                            <constraint firstItem="OMP-s8-pNv" firstAttribute="bottom" secondItem="KZ5-T9-Z5o" secondAttribute="bottom" id="evO-sS-rgV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="OMP-s8-pNv" id="IkE-Vm-YKt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bfb-Xj-gdc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3382.4427480916029" y="0.0"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="gfP-ZM-wDF">
             <objects>
@@ -454,10 +484,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray3Color">
-            <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

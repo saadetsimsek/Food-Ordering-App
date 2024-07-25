@@ -115,7 +115,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
   //      collectionView.deselectItem(at: indexPath, animated: true)
         
         if collectionView == categoryCollectionView {
-            
+            let controller = ListDishesViewController.instantiate()
+            controller.category = categories[indexPath.row]
+            navigationController?.pushViewController(controller, animated: true)
         }
         else{
             let controller = DishDetailViewController.instantiate()
