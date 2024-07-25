@@ -40,7 +40,17 @@ class HomeViewController: UIViewController {
 
         title = "Yemek Sepeti"
         
-        NetworkService.shared.myFirstRequest()
+        NetworkService.shared.myFirstRequest { results in
+            switch results {
+            case .success(let data):
+                for dish in data{
+                    print(dish.name ?? "")
+                }
+             //   print("The decoded date is: \(data)")
+            case .failure(let error):
+                print("The error is: \(error.localizedDescription)")
+            }
+        }
         
         delegateCalls()
         
