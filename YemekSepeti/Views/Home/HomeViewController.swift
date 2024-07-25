@@ -40,10 +40,7 @@ class HomeViewController: UIViewController {
 
         title = "Yemek Sepeti"
         
-        let service = NetworkService()
-        let request = service.createRequest(route: .temp, method: .post, parameters: ["firstName": "Saadet", "lastname": "simsek"])
-        print("The URL is: \(request?.url)")
-        print("The body: \(request?.httpBody)")
+        NetworkService.shared.myFirstRequest()
         
         delegateCalls()
         
