@@ -15,11 +15,16 @@ struct NetworkService{
         
     }
     
-    func myFirstRequest(completion: @escaping (Result<[Dish], Error>) -> Void ){
+/*    func myFirstRequest(completion: @escaping (Result<[Dish], Error>) -> Void ){
         request(route: .temp,
                 method: .get,
          //       type: String.self,
                 completion: completion)
+    }
+    */
+    
+    func fetchAllCategories(completion: @escaping(Result<AllDishes, Error>) -> Void){
+        request(route: .fetchAllCategories, method: .get, completion: completion)
     }
     
     private func request<T: Decodable>(route: Route,
@@ -37,7 +42,7 @@ struct NetworkService{
             if let data = data {
                 result = .success(data)
                 let responseString = String(data: data, encoding: .utf8) ?? "Could not stringify our data"
-           //     print("The response is: \n\(responseString)")
+           print("The response is: \n\(responseString)")
             }
             else if let error = error {
                 result = .failure(error)

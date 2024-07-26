@@ -6,41 +6,28 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class HomeViewController: UIViewController {
     
-    var categories: [DishCategory] = [
-        .init(id: "id1", name: "Africa Dish 1", image: "https://fastly.picsum.photos/id/121/100/200.jpg?hmac=yi9c_mQa-JmlP6lWB30xXO1xIENcumVVSY_il22pcgc"),
-        .init(id: "id2", name: "Africa Dish 2", image: "https://fastly.picsum.photos/id/121/100/200.jpg?hmac=yi9c_mQa-JmlP6lWB30xXO1xIENcumVVSY_il22pcgc"),
-        .init(id: "id3", name: "Africa Dish 3", image: "https://fastly.picsum.photos/id/121/100/200.jpg?hmac=yi9c_mQa-JmlP6lWB30xXO1xIENcumVVSY_il22pcgc"),
-        .init(id: "id4", name: "Africa Dish 4", image: "https://fastly.picsum.photos/id/121/100/200.jpg?hmac=yi9c_mQa-JmlP6lWB30xXO1xIENcumVVSY_il22pcgc"),
-        .init(id: "id5", name: "Africa Dish 5", image: "https://fastly.picsum.photos/id/121/100/200.jpg?hmac=yi9c_mQa-JmlP6lWB30xXO1xIENcumVVSY_il22pcgc"),
-    ]
+    var categories: [DishCategory] = []
     
-    var populars: [Dish] = [
-        .init(id: "id1", name: "Garri", description: "this is the best I ever tasted", image: "https://fastly.picsum.photos/id/121/100/200.jpg?hmac=yi9c_mQa-JmlP6lWB30xXO1xIENcumVVSY_il22pcgc", calories: 34),
-        .init(id: "id2", name: "Indomie", description: "this is the best I ever tasted this is the best I ever tasted this is the best I ever tasted this is the best I ever tasted this is the best I ever tasted this is the best I ever tasted this is the best I ever tasted this is the best I ever tasted this is the best I ever tasted", image: "https://fastly.picsum.photos/id/121/100/200.jpg?hmac=yi9c_mQa-JmlP6lWB30xXO1xIENcumVVSY_il22pcgc", calories: 314),
-        .init(id: "id3", name: "Pizza", description: "this is the best I ever tasted", image: "https://fastly.picsum.photos/id/121/100/200.jpg?hmac=yi9c_mQa-JmlP6lWB30xXO1xIENcumVVSY_il22pcgc", calories: 1320),
-    ]
+    var populars: [Dish] = []
     
-    var specials: [Dish] = [
-        .init(id: "id1", name: "Fried Plantain", description: "this is my favorite dish", image: "https://fastly.picsum.photos/id/121/100/200.jpg?hmac=yi9c_mQa-JmlP6lWB30xXO1xIENcumVVSY_il22pcgc", calories: 34),
-        .init(id: "id2", name: "Beans", description: "this is the best I ever tasted", image: "https://fastly.picsum.photos/id/121/100/200.jpg?hmac=yi9c_mQa-JmlP6lWB30xXO1xIENcumVVSY_il22pcgc", calories: 314),
-        .init(id: "id3", name: "Pizza", description: "this is the best I ever tasted", image: "https://fastly.picsum.photos/id/121/100/200.jpg?hmac=yi9c_mQa-JmlP6lWB30xXO1xIENcumVVSY_il22pcgc", calories: 1320),
-    ]
+    var specials: [Dish] = []
     
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     
     @IBOutlet weak var popularCollectionView: UICollectionView!
    
     @IBOutlet weak var specialsCollectionView: UICollectionView!
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Yemek Sepeti"
         
-        NetworkService.shared.myFirstRequest { results in
+  /*      NetworkService.shared.myFirstRequest { results in
             switch results {
             case .success(let data):
                 for dish in data{
@@ -51,10 +38,30 @@ class HomeViewController: UIViewController {
                 print("The error is: \(error.localizedDescription)")
             }
         }
+     */
         
         delegateCalls()
         
         registerCells()
+        
+        ProgressHUD.progress("Loading" , 0.42)
+        NetworkService.shared.fetchAllCategories {[weak self] results in
+            switch results {
+            case .success(let dishes):
+                ProgressHUD.dismiss()
+                self?.categories = dishes.categories ?? []
+                self?.populars = dishes.populars ?? []
+                self?.specials = dishes.specials ?? []
+                
+                DispatchQueue.main.async {
+                    self?.categoryCollectionView.reloadData()
+                    self?.popularCollectionView.reloadData()
+                    self?.specialsCollectionView.reloadData()
+                }
+            case .failure(let error):
+                ProgressHUD.error(error.localizedDescription)
+            }
+        }
     }
     
     private func delegateCalls(){

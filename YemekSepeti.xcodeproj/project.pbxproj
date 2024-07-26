@@ -21,6 +21,8 @@
 		6A0984392C4022CA000EF327 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0984382C4022CA000EF327 /* UIView+Extension.swift */; };
 		6A09843B2C402479000EF327 /* OnboaringSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A09843A2C402479000EF327 /* OnboaringSlide.swift */; };
 		6A09843D2C40279A000EF327 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A09843C2C40279A000EF327 /* OnboardingCollectionViewCell.swift */; };
+		6A0C8BD42C53AFE700520D82 /* AllDishes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0C8BD32C53AFE700520D82 /* AllDishes.swift */; };
+		6A0C8BD72C53B2BD00520D82 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 6A0C8BD62C53B2BD00520D82 /* ProgressHUD */; };
 		6A0D452A2C4BCB3D0078D87E /* DishPortraitCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A0D45292C4BCB3D0078D87E /* DishPortraitCollectionViewCell.xib */; };
 		6A0D452B2C4BCB3D0078D87E /* DishPortraitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0D45282C4BCB3D0078D87E /* DishPortraitCollectionViewCell.swift */; };
 		6A1B0BE52C4EB92E000D6D97 /* DishLandscapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A1B0BE42C4EB92E000D6D97 /* DishLandscapeCollectionViewCell.xib */; };
@@ -77,6 +79,7 @@
 		6A0984382C4022CA000EF327 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		6A09843A2C402479000EF327 /* OnboaringSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboaringSlide.swift; sourceTree = "<group>"; };
 		6A09843C2C40279A000EF327 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		6A0C8BD32C53AFE700520D82 /* AllDishes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDishes.swift; sourceTree = "<group>"; };
 		6A0D45282C4BCB3D0078D87E /* DishPortraitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishPortraitCollectionViewCell.swift; sourceTree = "<group>"; };
 		6A0D45292C4BCB3D0078D87E /* DishPortraitCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishPortraitCollectionViewCell.xib; sourceTree = "<group>"; };
 		6A1B0BE32C4EB92E000D6D97 /* DishLandscapeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishLandscapeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -110,6 +113,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A68BAD52C47F58C0049C8BE /* Kingfisher in Frameworks */,
+				6A0C8BD72C53B2BD00520D82 /* ProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +186,7 @@
 				6A68BAD12C47F4320049C8BE /* DishCategory.swift */,
 				6A32182C2C492F8400BA8DA5 /* Dish.swift */,
 				6A0426EC2C52669E002B5643 /* Order.swift */,
+				6A0C8BD32C53AFE700520D82 /* AllDishes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 			name = YemekSepeti;
 			packageProductDependencies = (
 				6A68BAD42C47F58C0049C8BE /* Kingfisher */,
+				6A0C8BD62C53B2BD00520D82 /* ProgressHUD */,
 			);
 			productName = YemekSepeti;
 			productReference = 6ADC15162C36CEF700B5CBDF /* YemekSepeti.app */;
@@ -436,6 +442,7 @@
 			mainGroup = 6ADC150D2C36CEF700B5CBDF;
 			packageReferences = (
 				6A68BAD32C47F58C0049C8BE /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				6A0C8BD52C53B2BD00520D82 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 			);
 			productRefGroup = 6ADC15172C36CEF700B5CBDF /* Products */;
 			projectDirPath = "";
@@ -491,6 +498,7 @@
 				6ADC151A2C36CEF700B5CBDF /* AppDelegate.swift in Sources */,
 				6ADC151C2C36CEF700B5CBDF /* SceneDelegate.swift in Sources */,
 				6A0984392C4022CA000EF327 /* UIView+Extension.swift in Sources */,
+				6A0C8BD42C53AFE700520D82 /* AllDishes.swift in Sources */,
 				6A0426EB2C526541002B5643 /* ListOrdesViewController.swift in Sources */,
 				6A0426F42C5271B1002B5643 /* Method.swift in Sources */,
 				6A0984342C4018A6000EF327 /* OnboardingViewController.swift in Sources */,
@@ -857,6 +865,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		6A0C8BD52C53B2BD00520D82 /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/relatedcode/ProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.3;
+			};
+		};
 		6A68BAD32C47F58C0049C8BE /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -868,6 +884,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		6A0C8BD62C53B2BD00520D82 /* ProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A0C8BD52C53B2BD00520D82 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
+			productName = ProgressHUD;
+		};
 		6A68BAD42C47F58C0049C8BE /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6A68BAD32C47F58C0049C8BE /* XCRemoteSwiftPackageReference "Kingfisher" */;
