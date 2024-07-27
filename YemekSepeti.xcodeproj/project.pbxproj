@@ -35,6 +35,7 @@
 		6A68BADB2C47FC9B0049C8BE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A68BADA2C47FC9B0049C8BE /* CardView.swift */; };
 		6AA837FA2C4562DE00CCBEC7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA837F92C4562DE00CCBEC7 /* HomeViewController.swift */; };
 		6ABDF5A82C51B84B009B349C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABDF5A72C51B84B009B349C /* UIViewController+Extension.swift */; };
+		6AD87EC12C53D47C00D59EF1 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6AD87EC02C53D47C00D59EF1 /* IQKeyboardManagerSwift */; };
 		6ADC151A2C36CEF700B5CBDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADC15192C36CEF700B5CBDF /* AppDelegate.swift */; };
 		6ADC151C2C36CEF700B5CBDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADC151B2C36CEF700B5CBDF /* SceneDelegate.swift */; };
 		6ADC15212C36CEF700B5CBDF /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6ADC15202C36CEF700B5CBDF /* Base */; };
@@ -114,6 +115,7 @@
 			files = (
 				6A68BAD52C47F58C0049C8BE /* Kingfisher in Frameworks */,
 				6A0C8BD72C53B2BD00520D82 /* ProgressHUD in Frameworks */,
+				6AD87EC12C53D47C00D59EF1 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +369,7 @@
 			packageProductDependencies = (
 				6A68BAD42C47F58C0049C8BE /* Kingfisher */,
 				6A0C8BD62C53B2BD00520D82 /* ProgressHUD */,
+				6AD87EC02C53D47C00D59EF1 /* IQKeyboardManagerSwift */,
 			);
 			productName = YemekSepeti;
 			productReference = 6ADC15162C36CEF700B5CBDF /* YemekSepeti.app */;
@@ -443,6 +446,7 @@
 			packageReferences = (
 				6A68BAD32C47F58C0049C8BE /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				6A0C8BD52C53B2BD00520D82 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
+				6AD87EBF2C53D47C00D59EF1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 6ADC15172C36CEF700B5CBDF /* Products */;
 			projectDirPath = "";
@@ -881,6 +885,14 @@
 				minimumVersion = 7.12.0;
 			};
 		};
+		6AD87EBF2C53D47C00D59EF1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -893,6 +905,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6A68BAD32C47F58C0049C8BE /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		6AD87EC02C53D47C00D59EF1 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6AD87EBF2C53D47C00D59EF1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
