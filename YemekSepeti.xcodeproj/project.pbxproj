@@ -46,6 +46,7 @@
 		6ADC153D2C36CEF800B5CBDF /* YemekSepetiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADC153C2C36CEF800B5CBDF /* YemekSepetiUITestsLaunchTests.swift */; };
 		6AE880AA2C46CFC80098BD2A /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AE880A92C46CFC80098BD2A /* CategoryCollectionViewCell.xib */; };
 		6AE880AB2C46CFC80098BD2A /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE880A82C46CFC80098BD2A /* CategoryCollectionViewCell.swift */; };
+		6AF45F2C2C565E9E0056356F /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF45F2B2C565E9E0056356F /* UserDefaults+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		6ADC153C2C36CEF800B5CBDF /* YemekSepetiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemekSepetiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6AE880A82C46CFC80098BD2A /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		6AE880A92C46CFC80098BD2A /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		6AF45F2B2C565E9E0056356F /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 				6A0984382C4022CA000EF327 /* UIView+Extension.swift */,
 				6A68BAD62C47F6230049C8BE /* String+Extension.swift */,
 				6ABDF5A72C51B84B009B349C /* UIViewController+Extension.swift */,
+				6AF45F2B2C565E9E0056356F /* UserDefaults+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				6A68BADB2C47FC9B0049C8BE /* CardView.swift in Sources */,
 				6A09843D2C40279A000EF327 /* OnboardingCollectionViewCell.swift in Sources */,
 				6A0426F82C529662002B5643 /* APIResponse.swift in Sources */,
+				6AF45F2C2C565E9E0056356F /* UserDefaults+Extension.swift in Sources */,
 				6A32182D2C492F8400BA8DA5 /* Dish.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -707,7 +711,6 @@
 				INFOPLIST_FILE = YemekSepeti/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -735,7 +738,6 @@
 				INFOPLIST_FILE = YemekSepeti/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
